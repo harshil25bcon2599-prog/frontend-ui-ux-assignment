@@ -3,5 +3,7 @@
 - q1-college-website : College Department Website (HTML5 + a little CSS)
 - q2-portfolio : Personal Portfolio Website (HTML5 + CSS3)
 - q3-food-ordering : Online Food Ordering Website (Bootstrap 5)
+- q4-student-information-system : Interactive Student Information System (jQuery)
+- q5-travel-tourism : Travel and Tourism Website (HTML5, CSS3, Bootstrap, jQuery)
 
 Open the index.html file inside each folder in a browser to see the website.

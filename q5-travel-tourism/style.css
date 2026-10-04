@@ -1,0 +1,49 @@
+/* CSS for the Travel and Tourism website */
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f8f9fa;
+}
+
+h1, h2 { font-family: Georgia, serif; }
+
+/* Same style for every section heading (consistency) */
+.section-title {
+  text-align: center;
+  color: #0d6efd;
+  margin-bottom: 25px;
+}
+
+/* Sections do not hide under the sticky navbar when we click a menu link */
+section { scroll-margin-top: 70px; }
+
+.card { transition: transform 0.3s, box-shadow 0.3s; }
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Extra text is hidden first. jQuery shows it when we click "Read more". */
+.more-text { display: none; }
+
+.gallery-img { cursor: pointer; transition: opacity 0.3s; }
+.gallery-img:hover { opacity: 0.8; }
+
+/* Back to top button (jQuery shows it after scrolling) */
+#topBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+footer { margin-top: 40px; }
+
+/* Smaller headings on mobile phones */
+@media (max-width: 576px) {
+  h1 { font-size: 26px; }
+  .section-title { font-size: 24px; }
+}

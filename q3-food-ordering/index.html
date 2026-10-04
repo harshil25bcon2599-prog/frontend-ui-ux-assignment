@@ -31,7 +31,8 @@
   <!-- Banner -->
   <div class="bg-light text-center py-5">
     <h1>Hungry? Order Online!</h1>
-    <p class="lead">Fresh and hot food delivered to your door</p>
+    <p class="lead d-none d-md-block">Fresh and hot food delivered to your door in 30 minutes</p>
+    <p class="lead d-md-none">Hot food at your door</p>
     <a href="#order" class="btn btn-danger btn-lg">Order Now</a>
   </div>
 
@@ -146,7 +147,8 @@
   <!-- Order form -->
   <div class="container my-4" id="order">
     <h2 class="text-center mb-3">Place Your Order</h2>
-    <form class="row g-3" onsubmit="alert('Thank you! Your order is placed.'); return false;">
+    <form class="row g-3"
+          onsubmit="new bootstrap.Modal(document.getElementById('orderModal')).show(); return false;">
       <div class="col-md-6">
         <label class="form-label">Name</label>
         <input type="text" class="form-control" required>
@@ -190,9 +192,30 @@
     </form>
   </div>
 
+  <!-- Modal component (pop-up box) - opens when the order is placed -->
+  <div class="modal fade" id="orderModal" tabindex="-1" aria-labelledby="orderModalLabel"
+       aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="orderModalLabel">Order Placed</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"
+                  aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Thank you! Your order is placed. Your food will reach you in about 30 minutes.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">OK</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- Footer -->
   <footer class="bg-dark text-white text-center py-3">
-    <p class="mb-0">&copy; 2026 Tasty Bites | Call us: 98765 43210</p>
+    <p class="mb-0">&copy; 2026 Tasty Bites
+      <span class="d-none d-sm-inline">| Call us: 98765 43210</span></p>
   </footer>
 
   <!-- Bootstrap JS (needed for the navbar toggle button) -->
